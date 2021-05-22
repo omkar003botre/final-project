@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+            color: yellow
+        }
+        
+        h2,
+        li {
+            color: yellow
+        }
+    </style>
+</head>
+
+<body bgcolor="blue">
+    <div ng-app="uu" ng-controller="gg">
+        <h1 target="cframe">Basic term Of C language</h1>
+        <button ng-mouseover="keywordofc()">C Keywords and Identifiers:</button><br>
+        <h2 ng-bind="keyofc"></h2>
+        <button ng-mouseover="listofkey()">List of Keywords</button><br>
+        <h2 ng-bind="list"></h2>
+        <button ng-mouseover="chs()">Character set</button>
+        <h2 ng-bind="se"></h2>
+        <button ng-mouseover="listofc()">List Of Special Characters in C </button>
+        <h2 ng-bind="lc"></h2>
+        <h2>The Special Characters are as follows : ,
+            <> . _ ( ) ; $ : % [ ] # ? ' & { } " ^ ! * / | - \ ~ + </h2>
+        <button ng-mouseover="identi()">C Identifiers</button>
+        <h2 ng-bind="id"></h2>
+    </div>
+    <h1>Rules for naming identifiers</h1>
+    <ol>
+        <li>A valid identifier can have letters (both uppercase and lowercase letters), digits and underscores.</li>
+        <li>The first letter of an identifier should be either a letter or an underscore.</li>
+        <li>You cannot use keywords as identifiers.</li>
+        <li>There is no rule on how long an identifier can be. However, you may run into problems in some compilers if the identifier is longer than 31 characters.</li>
+    </ol>
+    <br><a href="frameofc.html" target="frameofc.html"><button>Back</button></a>
+</body>
+<script>
+    var app = angular.module('uu', []);
+    app.controller('gg', function($scope) {
+        $scope.keywordofc = function() {
+
+            return $scope.keyofc = "Keywords are predefined, reserved words used in programming that have special meanings to the compiler.  Keywords are part of the syntax and they cannot be used as an identifier.";
+
+        };
+        $scope.listofkey = function() {
+            return $scope.list = "There are total 32 keywords these are auto,double,int,struct,break,else,long,switch,ase,num,register,typedef,char,extern,return  union,continue,for,signed,void,do,if,static,while,default,goto,sizeof,volatile,const,float,short,unsigned";
+        };
+        $scope.chs = function() {
+            return $scope.se = "A character set is a set of alphabets,letters,digits and some special characters that are valid in C language. Ex. Uppercse A To Z and Lowercase a to z,0 to 9, etc.";
+        };
+        $scope.identi = function() {
+            return $scope.id = "Identifier refers to name given to entities such as variables, functions, structures etc.Identifiers must be unique. They are created to give a unique name to an entity to identify it during the execution of the program. For example:int money, double accountBalance,Here, money and accountBalance are identifiers.Also remember, identifier names must be different from keywords. You cannot use int as an identifier because int is a keyword."
+        }
+
+    });
+</script>
+
+</html>

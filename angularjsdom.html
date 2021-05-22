@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        h2 {
+            color: yellow;
+        }
+        
+        h1,
+        h3 {
+            color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body ng-app="" background="backfordataofdom.jpg" style="background-position:left;">
+    <h1 style="text-align: center;">AngularJS HTML DOM</h1>
+    <h2>AngularJS has directives for binding application data to attributes <br>of the HTML DOM elements.</h2>
+    <h2>The ng-disabled Directive</h2>
+    <h3>The ng-disabled directive binds AngularJS application data to the disabled<br> attribute of HTML elements.</h3>
+    <h2>Click the button to disable the Button</h2>
+    <br><input type="checkbox" ng-model="dis">
+    <button ng-disabled="dis">I am crickerter</button>
+    <h2>The value is {{dis}}</h2>
+    <h2>Explination</h2>
+    <h3>Application explained:
+        <h3>The ng-disabled directive binds the application data mySwitch to the<br> HTML button's disabled attribute.<br> The ng-model directive binds the value of the HTML checkbox <br>element to the value of mySwitch.<br> If the value of mySwitch evaluates
+            to true, the button will be disabled: </h3>
+        <hr>
+        <h1>The ng-show Directive</h1>
+        <h2>The ng-show directive shows or hides an HTML element.</h2>
+        <input type="checkbox" ng-model="che">
+        <h2>Click to show the properties</h2>
+        <button ng-show="che">I am King crickert</button>
+        <hr>
+        <input type="checkbox" ng-model="had">
+        <h2>Click to hide the properties</h2>
+        <button ng-hide="had">I am The footballer</button>
+        <hr>
+        <a href="codefotofordom.png"><button>Script</button></a>
+        <a href="sixpage.html"> <button>Back</button></a>
+</body>
+
+
+
+
+</html>

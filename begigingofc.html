@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+        h1,
+        ol {
+            color: yellow;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: blue;">
+    <h1 style="text-align: center;">Beginning with C programming</h1>
+    <ol>
+        <li>Structure of a C program:<br> After the above discussion, we can formally assess the structure of a C program.<br> By structure, it is meant that any program can be written in this structure only. <br>Writing a C program in any other structure
+            will hence lead to a Compilation Error.</li>
+        <li>Header Files Inclusion: <br>The first and foremost component is the inclusion of the Header files in a C program.<br> A header file is a file with extension .h which contains C function declarations<br> and macro definitions to be shared between
+            several source files.<br> Some of C Header files:<br> stddef.h – Defines several useful types and macros.<br> stdint.h – Defines exact width integer types.<br> stdio.h – Defines core input and output functions<br> stdlib.h – Defines numeric
+            conversion functions, pseudo-random network generator, memory allocation<br> string.h – Defines string handling functions <br>math.h – Defines common mathematical functions<br> Syntax to include a header file in C: #include </li>
+        <li>Main Method Declaration: <br>The next part of a C program is to declare the main() function.<br> The syntax to declare the main function is: int main() {}
+
+        </li>
+        <li>
+            Variable Declaration:<br> The next part of any C program is the variable declaration.<br> It refers to the variables that are to be used in the function.<br> Please note that in the C program, no variable can be used without being declared.
+            <br> Also in a C program, the variables are to be declared before any operation in the function. Example: int main() { int a;
+        </li>
+        <li>Body: Body of a function in C program, refers to the operations that are performed in the functions.<br> It can be anything like manipulations, searching, sorting, printing, etc.<br> Example: int main() { int a; printf("%d", a); .
+
+        </li>
+        <li>Return Statement: The last part in any C program is the return statement.<br> The return statement refers to the returning of the values from a function. <br>This return statement and return value depend upon the return type of the function. For
+            example, if the return type is void, then there will be no return statement. <br>In any other case, there will be a return statement and the return value will be of the type of the specified return type.<br> Example: int main() { int a; printf("%d",
+            a); return 0; }
+        </li>
+        <li>Writing first program: Following is first program in C #include
+            <stdio.h> <br> int main(void) <br> { <br> printf("The Love"); <br>return 0;<br> }
+        </li>
+        <li>Explination:<br> Line 1: [ #include
+            <stdio.h> ] In a C program, all lines that start with # are processed by preprocessor which is a program invoked by the compiler. <br> In a very basic term, preprocessor takes a C program and produces another C program. <br>The produced program has
+                no lines starting with #, <br>all such lines are processed by the preprocessor.<br> In the above example, preprocessor copies the preprocessed code of stdio.h to our file. The .h files are called header files in C.<br> These header files
+                generally contain declaration of functions. We need stdio.h for the function printf() used in the program.
+        </li>
+        <li>
+            Line 2 [ int main(void) ] There must to be starting point from where execution of compiled C program begins.<br> In C, the execution typically begins with first line of main(). The void written in brackets indicates that the main doesn’t take
+            any parameter (See this for more details). main() can be written to take parameters also.<br> We will be covering that in future posts. The int written before main indicates return type of main().<br> The value returned by main indicates status
+            of program termination.
+        </li>
+        <li>Line 3 and 6: [ { and } ] In C language, a pair of curly brackets define a scope and mainly used in functions and control statements like if, else, loops. All functions must start and end with curly brackets. <br>Line 4 [ printf(“GeeksQuiz”);
+            ] printf() is a standard library function to print something on standard output. The semicolon at the end of printf indicates line termination.<br> In C, semicolon is always used to indicate end of statement.
+
+            <br>Line 5 [ return 0; ] The return statement returns the value from main(). The returned value may be used by operating system to know termination status of your program. The value 0 typically means successful termination.</li>
+
+
+    </ol>
+    <br><a href="firstpageofc.html"><button>Back</button></a>
+</body>
+
+</html>

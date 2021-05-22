@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <style>
+        input.ng-invalid {
+            background-color: red;
+        }
+        
+        input.ng-valid {
+            background-color: ;
+        }
+    </style>
+</head>
+
+<body ng-app="myapp">
+    <h1>Employee registration Form
+
+    </h1>
+    <form name="empdetail">
+        Enter the Full Name<input type="text" name="Name" ng-required="true" ng-model="name">
+
+        <h2>You entered detail is</h2>
+        <h2>{{empdetail.Name.$error.$valid}}</h2>
+        <br> Enter the Education
+        <input type="text" name="edu" ng-required="true" ng-model="Education " ng-minlength="3" ng-maxlength="10">You entered detail is{{empdetail.dedu.$valid}}<br> Enter your DOB<input type="date" name="dob" ng-required="true" ng-model="dob" ng-maxlength="14"><br>        Enter your DOJ<input type="date" name="doj" ng-required="true" ng-model="doj " ng-maxlength="14"><br> SALARY
+        <input type="number" ng-model="salary" name="SALARY" ng-pristine="true" ng-maxlength="6"><br> <button type="submit">Submit</button>
+    </form>
+    <h1>Calculator</h1>
+    Enter number1<input type="number" ng-model="num1"> Enter number2<input type="number" ng-model="num2">
+    <h1>Select the operation</h1>
+    <select ng-model="op">
+      <option value="add">Addtion</option>
+      <option value="sub">Subtraction</option>
+      <option value="mul">Multiplication</option>
+      <option value="div">Division</option>
+  </select>
+    <div ng-switch="op">
+
+    </div>
+    <div ng-switch-when="add">you Selected the addition opeartion and here is your addition{{num1+num2}}</div>
+    <div ng-switch-when="sub">you Selected the subtraction opeartion and here is your subtraction{{num1-num2}}</div>
+    <div ng-switch-when="mul">you Selected the multiplicaiton opeartion and here is your multiplicaiton{{num1*num2}}</div>
+    <div ng-switch-when="div">you Selected the addition opeartion and here is your division{{num1/num2}}</div>
+
+</body>
+
+
+
+</html>

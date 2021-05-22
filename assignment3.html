@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script src="angularjslibery.js">
+    </script>
+</head>
+
+<body ng-app="">
+    <div ng-init="student_table={Roll_no,name:'01',student_name:'Tanmay jadhav',Address:'Saswad',student_marks:'95%',
+               Roll_no,name:'02',student_name:'Kalpeh RAjpurohit',Address:'Katraj',student_marks:'94%'}"></div>
+    <table style="border:blue;">
+        <tr>
+            <th>
+                roll number
+            </th>
+            <th>Student Name</th>
+            <th>Address</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td ng-repeate="i in student_table">{{i.student_table.Roll_no}}
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
