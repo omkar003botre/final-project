@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body background="backfordataofbox.jpg">
+    <h1 style="text-align: center; color: seashell;">
+        AngularJS Select Boxes</h1>
+    <h2 style="color: aliceblue;">AngularJS lets you create dropdown lists based on items in an array, or an object. Creating a Select Box Using ng-options If you want to create a dropdown list, based on an object or an array in AngularJS, you should use the ng-options directive:
+    </h2>
+    <h2 style="color: aliceblue;">Using ng-optiondirective.</h2>
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <select ng-model="selectedName" ng-options="x for x in names">
+</select>
+        <h2 style="color: aliceblue;">Using ng-repeat</h2>
+        <select ng-model="game">
+
+            <option ng-repeat="k in names"> {{k}}   </option>
+        </select>
+        <h2 style="color: aliceblue;">you selected the type of crickert
+            <isindex><br>{{game}}</h2>
+        <h2 style="color: aliceblue;">On an Object</h2>
+        <select ng-model="cap">
+                 <option ng-repeat="z in g " ng-value="{{z}}">{{z.format}}</option>
+                </select>
+        <h2 style="color: aliceblue;">you selected the type of crickert is<br> {{cap.format}}<br>And captain is <br>{{cap.captain}}</h2>
+    </div><a href="codefotoforbox.png"><button> See the script</button></a>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.names = ["T-20", "ODI", "Test"];
+            $scope.g = [{
+                'format': 't-20',
+                'captain': 'Tejas'
+            }, {
+                'format': 'test',
+                'captain': 'Omkar'
+            }, {
+                'format': 'one-day',
+                'captain': 'abhijit'
+            }, ];
+        });
+    </script>
+
+
+
+</body>
+
+</html>

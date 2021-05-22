@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Loops in C language.</title>
+    <style>
+        div {
+            width: 300px;
+            border: 15px solid goldenrod;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color:slateblue;">Loops in C language </h1>
+    <h2>In programming, a loop is used to repeat a block of code until the specified condition is met.
+
+        <br>C programming has three types of loops:<br></h2>
+    <ol>
+        <li>for loop</li>
+        <li>While loop</li>
+        <li>do while loop</li>
+    </ol>
+
+    <hr>
+    <h2 style="text-align: center; color:slateblue;">for loop</h2>
+    <h3>for Loop The syntax of the for loop is: <br>for (initializationStatement; testExpression; updateStatement)
+        <br>{
+        <br>// statements inside the body of loop } <br>
+        <h3>How it works ?
+            <ul>
+                <li>The initialization statement is executed only once.</li>
+                <li>Then, the test expression is evaluated. If the test expression is evaluated to false, the for loop is terminated.</li>
+                <li>However, if the test expression is evaluated to true, statements inside the body of the for loop are executed,<br> and the update expression is updated. Again the test expression is evaluated.</li>
+            </ul>
+
+        </h3>
+
+        Example:
+        <div> // Print numbers from 1 to 10 <br> #include
+            < stdio.h><br> int main()<br> {<br> int i;<br> for (i = 1; i
+                < 11; ++i)<br>
+                    {<br> printf("%d ", i);<br> }
+                    <br> return 0;<br> }
+                    <br>
+        </div>
+
+    </h3>
+    <hr>
+    <h2 style="text-align: center; color:slateblue;">while loop</h2>
+    <h3><br>The syntax of the while loop is:
+        <br> while (testExpression) <br> {
+        <br> // the body of the loop <br> }
+        <br> How while loop works?<br>
+        <ul>
+            <li>The while loop evaluates the test expression inside the parenthesis ().</li>
+            <li>If the test expression is true, statements inside the body of while loop are executed. Then, the test expression is evaluated again.</li>
+            <li>The process goes on until the test expression is evaluated to false.</li>
+            <li>If the test expression is false, the loop terminates (ends).</li>
+        </ul>
+        <h3>
+            <div>// Print numbers from 1 to 5<br> #include
+                < stdio.h><br> int main()<br> {
+                    <br> int i = 1;<br> while (i
+                    <=5 )<br>
+                        {<br> printf("%d\n", i);<br> ++i;
+                        <br> }
+                        <br> return 0;<br> }
+            </div>
+        </h3>
+    </h3>
+    <hr>
+    <h2 style="text-align: center; color:slateblue;">do...while loop</h2>
+    <br>
+    <h3>The do..while loop is similar to the while loop with one important difference. <br> The body of do...while loop is executed at least once. <br>Only then, the test expression is evaluated.
+
+        <br>The syntax of the do...while loop is:<br> do
+
+        <br> {
+        <br> // the body of the loop<br> }
+        <br> while (testExpression);<br>
+        <br>
+        <ul>How do...while loop works?
+            <br>
+            <li>The body of do...while loop is executed once.Only then, the test expression is evaluated.</li>
+            <li>If the test expression is true, the body of the loop is executed again and the test expression is evaluated.</li>
+            <li>This process goes on until the test expression becomes false.</li>
+            <li>If the test expression is false, the loop ends.</li>
+
+        </ul>
+        Example:
+        <div>
+            // Program to add numbers until the user enters zero #include
+            < stdio.h><br> int main()<br> {
+                <br> double number, sum = 0;<br> // the body of the loop is executed at least once<br> do
+                <br> {
+                <br> printf("Enter a number: ");<br> scanf("%lf", &number);<br> sum += number;<br> }
+                <br> while(number != 0.0);<br> printf("Sum = %.2lf",sum);<br> return 0;<br> }
+                <br>
+        </div>
+        <hr>
+        <h2 style="text-align: center; color:slateblue;">C switch Statement:</h2>
+        <h3><br>The switch statement allows us to execute one code block among many alternatives.<br> You can do the same thing with the if...else..if ladder. However, the syntax of the switch statement is much easier to read and write.
+            <br>Syntax of switch...case<br> switch (expression)<br> ​{
+            <br> case constant1:<br> // statements<br> break;
+            <br> case constant2:<br> // statements<br> break;
+            <br> .
+            <br> .
+            <br> . default:
+            <br> // default statements<br> }
+            <br>
+
+        </h3>
+    </h3>
+    <a href="startofc.html "><button style="color:indigo; ">BACK</button></a>
+</body>
+
+</html>

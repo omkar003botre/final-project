@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="D:\script\angularjsprogramm\angularjslibery.js"></script>
+    <style>
+        h2 {
+            color: deeppink;
+            font-family: cursive;
+        }
+        
+        p {
+            color: deeppink;
+            font-size: large;
+            font-family: fantasy;
+        }
+        
+        div {
+            color: deeppink;
+            font-size: large;
+            font-family: fantasy;
+        }
+    </style>
+
+</head>
+
+<body ng-app="" background="backfordirective.jpg">
+
+    <h2> Enter the city name below :</h2> <input type="text" ng-model="name">
+    <p ng-bind="name"></p>
+    <h2> Enter the roll number below:</h2><input type="number" ng-model="roll_no" ng-init="roll_no='03'">
+    <div ng-bind="roll_no"></div>
+
+    <h2>Enter the year of Birth below:</h2><input type="number" ng-model="digit">
+    <div>{{digit}}</div>
+    <h2>Enter First name below:</h2><input type="text" ng-model="first_name">
+    <h2> Enter last name below:</h2><input type="text" ng-model="last_name"> {{first_name+ " " + last_name}}
+    <hr>
+    <script>
+        var app = angular.module('myctrl', []);
+        app.controller = ('myctrl', function($scope)) {
+            $scope.first_name = "Omkar";
+            $scope.last_name = "Botre";
+        }
+    </script>
+    <a href="D:\script\angularjsprogramm\mywebsiteforwebstudy\inroductionofangularjs.html">
+        <button><h2>
+            <-Back</h2></button>
+    </a>
+    <h1 style="color: red;">Coding </h1>
+    <img src="codefotofordirective.png">
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Functions in C language</title>
+    <style>
+        div {
+            width: 300px;
+            border: 15px solid silver;
+            padding: 50px;
+            margin: 20px;
+        }
+        
+        #d1 {
+            width: 300px;
+            border: 15px solid silver;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 style="color: tomato; text-align: center;">C Function </h2>
+    <hr>
+    <h3>A function is a block of code that performs a specific task.<br> <br>To understand examples in this page, you should have the knowledge of the following topics:<br> Syntax of a function<br> return_type function_name (argument list)<br> {
+        <br> Set of statements – Block of code<br> }
+        <br> return_type: Return type can be of any data type such as int, double, char, void, short etc. Don’t worry you will understand these terms better once you go through the examples below.<br> function_name: It can be anything, however it is advised
+        to have a meaningful name for the functions so that it would be easy to understand the purpose of function just by seeing it’s name.<br> argument list: Argument list contains variables names along with their data types. These arguments are kind
+        of inputs for the function. For example – A function which is used to add two integer variables, will be having two integer argument.<br> Block of code: Set of C statements, which will be executed whenever a call will be made to the function.<br>        Do you find above terms confusing? – Do not worry I’m not gonna end this guide until you learn all of them :)<br> Lets take an example – Suppose you want to create a function to add two integer variables.<br>
+
+
+
+
+    </h3>
+
+    <ol>There are two types of function in C <br><br>
+        <li style="color: royalblue;">User Define function :The function Define and declare by user</li><br>
+        <li style="color: sienna;">default Function: This function is by default define in computer libarary </li><br>
+    </ol>
+    Example of User define function:
+    <div>
+        <br>#include
+        < stdio.h><br> int addition(int num1, int num2)<br> {
+            <br> int sum;<br> /* Arguments are used here*/<br><br> sum = num1+num2;<br> /* Function return type is integer so we are returning<br> * an integer value, the sum of the passed numbers.<br> */
+            <br> return sum;<br> }
+            <br> int main()<br> {
+            <br> int var1, var2;<br> printf("Enter number 1: ");<br> scanf("%d",&var1);
+            <br> printf("Enter number 2: ");<br> scanf("%d",&var2);
+            <br> /* Calling the function here, the function return type<br> * is integer so we need an integer variable to hold the<br> * returned value of this function.<br> */
+            <br> int res = addition(var1, var2);<br> printf ("Output: %d", res);<br> return 0;<br> }
+            <br>
+    </div>
+    Example of user define function is : sqrt(),max(),min(),abs() etc./div>
+    <h2>Types of user define function :
+
+    </h2><br><br>
+    <hr>
+    <h2>Example 1: No arguments passed and no return value:</h2>
+    <img src="usertypefunction1.png"> <br>
+    <hr>
+    <h2>Example 2: No arguments passed but a return value</h2>
+    <h3>#include
+        < stdio.h><br> int getInteger();<br> int main()<br> {
+            <br> int n, i, flag = 0;<br> // no argument is passed<br> n = getInteger(); <br> for(i=2; i
+            <=n/2; ++i)<br>
+                {<br> if(n%i==0){
+                <br> flag = 1;<br> break;
+                <br> }
+                <br> }
+                <br> if (flag == 1)<br> printf("%d is not a prime number.", n);<br> else
+                <br> printf("%d is a prime number.", n);<br> return 0;<br> }
+                <br> // returns integer entered by the user<br> int getInteger() <br> {
+                <br> int n;<br> printf("Enter a positive integer: ");<br> scanf("%d",&n);
+                <br> return n;<br> }
+    </h3>
+    <hr>
+    <h2>Example 3: Argument passed but no return value</h2>
+    <img src="userdefine3.png">
+    <hr>
+
+    <h2>Example 4: Argument passed and a return value</h2>
+    <img src="userdefine4.png">
+    <hr>
+    <a href="startofc.html "><button style="color:indigo; ">BACK</button></a>
+</body>
+
+</html>

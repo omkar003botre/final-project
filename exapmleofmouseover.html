@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<h2>Example of ng-mousemove </h2>
+
+ng-mousemove
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <h1 ng-mousemove="myfun() ">Mouse Over Me!</h1>
+        <h1 ng-mousemove="count=count+1 ">Mouse Over Me!</h1>
+
+        <h2>{{ msg }}</h2>
+        <hr>
+        <h3>The mouse has been move{{count}}times</h3>
+        <h1>Example of ng-mousedown</h1>
+        <h1 ng-mousedown="d=d+1 ">Mouse Over Me!</h1>
+        <h3>The mouse has been down{{count}}times</h3>
+        <hr>
+        <h2>Example of ng-mouseenter </h2>
+        <input ng-mouseenter="t=t+1 "> Enter Mouse in the input field !
+        <h3>The mouse has been ented in input field {{t}} times</h3>
+        <hr>
+
+        <h2>Example of ng-mouseleave </h2>
+        <input ng-mouseleave="z=z+1 "> leavre the Mouse from the input field !
+        <h3>The mouse has been leaved from input field {{z}} times</h3>
+        <hr>
+        <h2>Example of ng-mousemove </h2>
+        <input ng-mousemove="w=w+1 "> ovet the mouse from the input field !
+        <h3>The mouse has been leaved from input field {{w}} times</h3>
+        <hr>
+
+        <a href="codefotoformousemove.png"><button>SEE SCRIPT</button></a><br><br><br>
+        <a href="dataofangularjsdvents.html"><button>BACK</button></a>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.myfun = function() {
+
+                return $scope.msg = "I am a cricketer!";
+            };
+
+        });
+    </script>
+</body>
+
+</html>

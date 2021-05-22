@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        td {
+            text-align: center;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body background="backforData-types-in-C.png" style="background-size:100%; background-repeat: no-repeat;">
+    <h1 style="text-align: center;">C Data Types</h1>
+    <h2>In C programming, data types are declarations for variables. <br>This determines the type and size of data associated with variables.<br>EX,int myVar;</h2>
+    <div ng-app="hg" ng-controller="po"><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>Basic types</h2>
+        <table border="yes">
+            <tr>
+                <td>Data Type</td>
+                <td ng-repeat="h in ty"> {{h}}</td>
+            </tr>
+
+            <tr>
+                <td>Formate Specifier</td>
+                <td ng-repeat="q in fs">{{q}}</td>
+            </tr>
+        </table>
+        <hr>
+        <button ng-mouseover="in()">int  data type</button>
+        <h2 ng-bind="imsg"></h2>
+        <hr>
+        <button ng-mouseover="fl()">Float and double data type</button>
+        <h3 ng-bind="fmsg"></h3>
+        <hr>
+        <button ng-mouseover="ch()">Char data type</button>
+        <h3 ng-bind="cmsg"></h3>
+        <hr>
+        <button ng-mouseover="vo()">Void Data type</button>
+        <h3 ng-bind="vmsg"></h3>
+        <hr>
+        <button ng-mouseover="sl()">short and long</button>
+        <h3 ng-bind="slmsg"></h3>
+        <hr>
+        <h1>Derived Data Types</h1>
+        <h3>Data types that are derived from fundamental data types are derived types. <br>For example: arrays, pointers, function types, structures, etc.
+
+            <br>We will learn about these derived data types in later tutorials.</h3>
+    </div>
+    <hr>
+    <a href="codefotoforcdatatype.png"><button>SEE the c Program for size of data types</button></a>
+    <hr><a href="frameofc.html" target="frameofc.html"><button>Back</button></a>
+
+</body>
+<script>
+    var app = angular.module('hg', []);
+    app.controller('po', function($scope) {
+        $scope.ty = ['int', 'char', 'float', 'double', 'short int', 'unsingh int', 'long int', 'long-long int', 'unsingh long int'];
+
+        $scope.fs = ['%d %i', '%c', '%f', '%lf', '%hd', '%u', '%ld %li', '%lld %lli', '%lu'];
+        $scope.in = function() {
+            $scope.imsg = "Integers are whole numbers that can have both zero, positive and negative values but no decimal values. <br>For example, 0, -5, 10.<br>We can use int for declaring an integer variable. <br>int X; Here, X is a variable of type integer.The sizeof int is usually 4 bytes(32 bits).And,it can take 232 distinct states from - 2147483648 to 2147483647. ";
+        };
+        $scope.fl = function() {
+            $scope.fmsg = "float and double are used to hold real numbers.EX float salary,double price.In C,floating-point numbers can also be represented in exponential.For example,float normalizationFactor=22.442e2";
+        };
+        $scope.ch = function() {
+            $scope.cmsg = "char Keyword char is used for declaring character type variables.EX char test = 'h' ,The size of the character variable is 1 byte.";
+        };
+        $scope.vo = function() {
+            $scope.vmsg = "void is an incomplete type. It means nothing  or no type. You can think of void as absent.For example, if a function is not returning anything, its return type should be void.Note that, you cannot create variables of void type.";
+        };
+        $scope.sl = function() {
+            $scope.slmsg = "If you need to use a large number, you can use a type specifier long. Here's how:long a,long long b,long double c,Here variables a and b can store integer values. And, c can store a floating-point number.If you are sure, only a small integer ([−32,767, +32,767] range) will be used, you can use short.short d";
+        };
+    });
+</script>
+
+
+</html>

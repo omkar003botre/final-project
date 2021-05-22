@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script src="D:\script\angularjsprogramm\angularjslibery.js"></script>
+    <title>
+        Objects in Angular js.
+    </title>
+
+</head>
+
+<body ng-app="" background="backgroundforobject.jpg">
+    <marquee>
+        <h1 style="color:deeppink; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">AngularJs Objects</h1>
+    </marquee>
+    <h2 style="color:darkblue; background-color:gold;">Objects in a AngularJs is just like a objects in java script. </h2>
+    <div ng-init="myobject={gamename:'Cricket',gametype:'Out door'}"></div>
+    <h2 style="color: deepskyblue;"> My favourite game is</h2><span ng-bind="myobject.gamename" style="color: deeppink;">
+        </span> <br>
+    <h2 style="color: deepskyblue;">It is an</h2>
+    <p ng-bind="myobject.gametype" style="color: deeppink;"></p>game
+    <h1 style="color:deeppink; font-family: cursive;" ">Enter the Sports Name</h1><input type=" text " ng-model="Gname ">
+    <div style="font-family: cursive;color: fuchsia; ">{{game.Gname}}</div>
+    <hr>
+    <h1 style="font-family: cursive;color: fuchsia; ">Angularjs arrays:</h1>
+    <h2 style="font-family: cursive;color: darkblue; background-color: gold; ">Array is a collction of variables values of same same data types or<br>Its an collection of homoginiuos data.</h2>
+    <div ng-init="myarr=[10,20,30,40,50] "></div> 
+    <h2 style="font-family: cursive;color: fuchsia; ">We can print the array by using AngularJs Expression.</h2>
+    <div style="color:darkorange;font-size:larger; ">{{myarr}}</div>
+    <h2 style="font-family: cursive;color: fuchsia; ">Or we can print by using its index number.</h2>
+    <div style="color:darkorange;font-size: larger; ">{{myarr[3]}}</div><hr>
+    <h1 style="color: fuchsia; ">Script: </h1>
+    <img src="codefotoforobjectandarray.png "> 
+</body>
+
+
+</html>

@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Controler flow Staments in C</title>
+    <style>
+        div {
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: brown; text-align: center;">Control Staments in C </h1>
+    <hr>
+    <h2 style="color: chocolate;">C if Statement</h2>
+    <h2>The syntax of the if statement in C programming is:<br> if (test expression)<br> { // code }
+    </h2>
+    <h3>How it works: The if statement evaluates the test expression inside the parenthesis ().</h3>
+    <ul style="color: crimson;">
+        <li>If the test expression is evaluated to true, statements inside the body of if are executed.</li>
+        <li>If the test expression is evaluated to false, statements inside the body of if are not executed</li>
+    </ul>
+    <h3>Example :</h3>
+    <div>
+        // Program to display a number if it is negative<br> #include "
+        < stdio.h><br> int main()<br> {<br> int number;<br> printf("Enter an integer: ");<br> scanf("%d", &number);<br> // true if number is less than 0<br> if (number
+            < 0) <br>{ printf("You entered %d.\n", number); }
+                <br> printf("The if statement is easy.");<br> return 0;<br> }
+
+    </div>
+    <hr>
+    <h2 style="color:darkorange">C if...else Statement</h2>
+    <h3>The if statement may have an optional else block. <br>The syntax of the if..else statement is:<br> if (test expression)<br> { // run code if test expression is true }<br> else<br> { // run code if test expression is false }
+        <br>How if...else statement works?
+        <br>
+        <ul>If the test expression is evaluated to true,
+            <li>statements inside the body of if are executed.</li>
+            <li>statements inside the body of else are skipped from execution.</li>
+        </ul>
+        <ul>If the test expression is evaluated to false,
+
+            <li>statements inside the body of else are executed</li>
+            <li>statements inside the body of if are skipped from execution.</li>
+        </ul>
+    </h3>
+    <h3>Example :</h3>
+    <div>
+
+        #include
+        < stdio.h><br> int main() <br> #include
+            < stdio.h><br> int main() <br>{<br> int number;<br> printf("Enter an integer: ");<br> scanf("%d", &number);<br> // True if the remainder is 0<br> if (number%2 == 0) <br>{ printf("%d is an even integer.",number);<br> }
+                <br> else <br>{<br> printf("%d is an odd integer.",number);<br> }
+                <br> return 0;<br> }
+                <br>{<br> int number;<br> printf("Enter an integer: ");<br> scanf("%d", &number);<br> // True if the remainder is 0<br> if (number%2 == 0) <br>{<br> printf("%d is an even integer.",number);<br> }
+                <br> else
+                <br> {
+                <br>printf("%d is an odd integer.",number);<br> }
+
+                <br> return 0; }
+    </div>
+    <hr>
+    <h2>C if...else Ladder</h2>
+    <h3>The if...else statement executes two different codes depending upon whether the test expression is true or false. <br>Sometimes, a choice has to be made from more than 2 possibilities.
+
+        <br> The if...else ladder allows you to check between multiple test expressions and execute different statements.</h3>
+    <h2>Example :</h2>
+    <div>
+        // Program to relate two integers using =, > or
+        < symbol #include < stdio.h><br> int main() <br>{<br> int number1, number2;<br> printf("Enter two integers: ");<br> scanf("%d %d", &number1, &number2);<br> //checks if the two integers are equal. if(number1 == number2) <br>{<br>
+            <br>printf("Result: %d = %d",number1,number2); }
+            <br> //checks if number1 is greater than number2. else if (number1 > number2) <br>{ printf("Result: %d > %d", number1, number2);<br> }
+            <br> }
+            <br> //checks if both test expressions are false else <br>{
+            <br>printf("Result: %d
+            < %d ",number1, number2);<br>
+    }<br>
+
+    return 0;<br>
+}
+        </div><hr>
+        <h2>Nested if...else<br></h2>
+            <h3>This program given below relates two integers using either <, <br>> and = similar to the if...else ladder's example.<br> However, we will use a nested if...else statement to solve this problem.</h3>
+            <h2>Example</h2>
+            <div>
+                #include < stdio.h ><br>
+                    int main() <br>{<br>
+                        int number1, number2;<br>
+                        printf("Enter two integers: ");<br>
+                        scanf("%d %d ", &number1, &number2);<br>
+                    
+                        if (number1 >= number2) <br>{<br>
+                          if (number1 == number2) <br>{
+                            <br>printf("Result: %d=% d ",number1,number2);<br>
+                          }<br>
+                          else <br>{
+                            printf("Result: %d> %d", number1, number2);<br> }
+                <br> }
+                <br> else <br>{ printf("Result: %d
+                < %d ",number1, number2);<br>
+                        }<br>
+                    
+                        return 0;<br>
+            </div>
+            <a href="startofc.html "><button style="color: darkorange; ">BACK</button></a>
+</body>
+
+</html>

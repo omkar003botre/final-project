@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body background="backforangularjsinterval.jpg" style="background-repeat: no-repeat; background-size: cover;">
+    <br><br><br>
+    <br>
+    <br><br>
+    <br>
+    <h1>The $interval Service</h1>
+    <h2> It shows current time or <br>we can say the ultimate Watch</h2>
+    <div ng-app="yy" ng-controller="dd">
+        <h1>Cuurent Time is <br>{{thetime}}</h1>
+    </div>
+    <a href="dataofservices.html"><button>Back</button></a><br><br>
+    <a href="codefotoforintervalservices.png"><button> Script.</button></a>
+
+    <script>
+        var app = angular.module('yy', []);
+        app.controller('dd', function($scope, $interval) {
+            $scope.theTime = new Date().toLocaleTimeString();
+            $interval(function() {
+                $scope.thetime = new Date().toLocaleTimeString();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

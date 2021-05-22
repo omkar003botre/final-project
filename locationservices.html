@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    </script>
+</head>
+
+<body background="backforlocation.jpg" style="background-repeat: no-repeat; background-size: cover;">
+    <h2 style="color:blanchedalmond;">The $location service has methods which return information about the location of the current web page.</h2>
+    <h3 style="color: blanchedalmond;">You have to pass the $locatio as an service as an argument to controller(functions argument).</h3>
+    <div ng-app="zz" ng-controller="xx">
+        <h1 style="color:black; background-color:white;"> Your page location is<br> {{mylocation}}</h1>
+    </div>
+    <a href="dataofservices.html"><button>Back</button></a>
+    <a href="codefotoforlocationservices.png"><button>See the Script.</button></a>
+    <script>
+        var app = angular.module('zz', []);
+        app.controller('xx', function($scope, $location) {
+            $scope.mylocation = $location.absUrl();
+        });
+    </script>
+</body>
+
+</html>

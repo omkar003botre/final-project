@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <h1>Custoum Service</h1>
+    <div ng-app="lo" ng-controller="op">
+        <input type="number" ng-model="num">
+        <h1>The conversion is {{hex}}</h1>
+
+    </div>
+    <a href="dataofservices.html"><button>Back</button></a><br><br>
+    <a href="codefotofotcustumeservices.png"><button> Script.</button></a>
+
+</body>
+<script>
+    var app = angular.module('lo', []);
+    app.service('hexafy', function() {
+        this.myFunc = function(num) {
+            return num.toString(2);
+        }
+    });
+    app.controller('op', function($scope, hexafy) {
+        $scope.myfun = function(num) {
+            $scope.hex = hexafy.myfun(num);
+
+        }
+
+    });
+</script>
+
+</html>

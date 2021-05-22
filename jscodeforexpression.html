@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Program for Angularjs Expression.</title>
+    <script src="D:\script\angularjsprogramm\angularjslibery.js"></script>
+    <style>
+        h2 {
+            color: orange;
+            font-family: cursive;
+        }
+        
+        p {
+            color: orange;
+            font-family: fantasy;
+        }
+        
+        input {
+            color: red;
+        }
+    </style>
+</head>
+
+<body ng-app="" background="backofexpression.png">
+    <h2> Enter the number 1:</h2> <input type="number" ng-model="num1" style="font-family: cursive; background-color: purple;">
+    <h2>Enter the number 2:</h2> <input type="number" ng-model="num2" style="font-family: cursive;background-color: purple;">
+    <p>{{num1-num2}}</p><br>
+    <hr>
+    <h2>Enter the color you want:</h2> <input style="background-color: {{mycol}}" ng-model="mycol"> Enter the border you want <input style="border-color: {{mybdr}};" ng-model="mtbdr"><br>
+    <hr>
+    <h2>Enter the cost:</h2><input type="number" ng-model="cost">
+    <h2> Enter the Quantity:</h2>
+    <input type="number" ng-model="Quantity">
+    <h2>The Rate is {{cost*Quantity}}</h2>
+    <hr>
+    <h2> Enter the Your first Name below:</h2><input type="text" ng-model="First_name"><br>
+    <h2> Enter the Your first Name below:</h2><input type="text" ng-model="Last_name"><br> {{First_name+" "+Last_name}}
+    <hr>
+    <h2>Enter the Time</h2><input type="time" ng-model="time_dis">
+    <h1 ng-bind="time_dis"></h1>
+    <hr>
+    <a href="experessioninangularjs.html">
+        <button><h2>
+            <-Back</h2></button>
+
+    </a><br><br><br><br>
+    <p style="color:red"> see the coding</p>
+    <img src="codefotoforexpression.png">
+</body>
+
+</html>

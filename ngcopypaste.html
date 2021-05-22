@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="">
+
+    <input ng-copy="count = count + 1" ng-init="count=0" value="Copy this text" />
+
+    <p>You are copy cat and you has copied {{count}} times.</p>
+
+    <p>This example will increase the value of the variable "count" every time you copy the text in the input field.</p>
+    <input ng-cut="co = co + 1" ng-init="co=0" value="Cout this text" />
+
+    <p>You are copy cat and you has copied {{co}} times.</p>
+    <input ng-paste="dd=dd+1">Paste copy or cut text in input field
+    <h2> the text has been pasted {{dd}} times</h2>
+
+    <a href="codefotoofcopypste.png"><button>SEE SCRIPT</button></a><br><br><br>
+    <a href="dataofangularjsdvents.html"><button>BACK</button></a>
+
+
+</body>
+
+</html>

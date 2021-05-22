@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300px;
+            border: 15px solid purple;
+            padding: 50px;
+            margin: 20px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: saddlebrown;">Operators</h1>
+    <hr>
+    <h2 style="text-align: center;"> **************************************** Arithmetic Operator ***************************************************</h2>
+    <h2>There are 4 typrs of Operators used in C language, they are listed below </h2>
+
+    <h2 style="color:green;">1.Arithmatic Operator <br> +:addition or unary plus<br> - :subtraction or unary minus <br>* :multiplication<br> / :division<br> % :remainder after division (modulo division) <br></h2>
+
+
+
+
+    <div>
+
+        C program: Working of arithmetic operators:<br> #include(stdio.h) <br>int main()<br> {<br> int a = 9,b = 4,c = a+b; <br>printf("a+b = %d \n",c);<br> c = a-b; <br>printf("a-b = %d \n",c); <br>c = a*b; <br>printf("a*b = %d \n",c);<br> c = a/b;<br>        printf("a/b = %d \n",c);<br> c = a%b; <br>printf("Remainder when a divided by b = %d \n",c); <br>return 0<br>;<br> }</div>
+    <hr>
+    <h2 style="text-align: center;"> ****************************************Logical Operator ***************************************************</h2>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Description </th>
+        </tr>
+        <tr>
+            <td>&&</td>
+            <td>Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>||</td>
+            <td>Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>!</td>
+            <td>Called Logical NOT Operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false.</td>
+        </tr>
+
+    </table>
+
+    <div class="d1">#include (stdio.h)
+        <br> main()<br> {<br>
+
+        <br>int a = 5;<br> int b = 20;<br> int c ;<br> if ( a && b )<br> { <br>printf("Line 1 - Condition is true\n" ); <br>} <br>if ( a || b )<br> { <br>printf("Line 2 - Condition is true\n" );<br> }<br> /* lets change the value of a and b */ a = 0;
+        b = 10; <br>if ( a && b )
+        <br> {<br> printf("Line 3 - Condition is true\n" );<br> }<br> else<br> {<br> printf("Line 3 - Condition is not true\n" ); <br>}<br> if ( !(a && b) )<br> { printf("Line 4 - Condition is true\n" );<br> } <br>}
+    </div>
+    <hr>
+    <h2 style="text-align: center;"> ****************************************Relational Operator ***************************************************</h2>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Description </th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>Checks if the values of two operands are equal or not. If yes, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>></td>
+            <td>Checks if the value of left operand is greater than the value of right operand. If yes, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>
+                < </td>
+                    <td>Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>>=</td>
+            <td>Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true.</td>
+        </tr>
+        <tr>
+            <td>
+                <=</td>
+                    <td>Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.</td>
+        </tr>
+    </table>
+    <div>
+        #include
+        <stdio.h><br>
+
+            <br>main()<br> {
+
+            <br>int a = 21;<br>
+            <br>int b = 10;<br>
+            <br>int c ;<br> if( a == b ) <br>{<br>
+            <br>printf("Line 1 - a is equal to b\n" );<br> } <br>else <br>{<br>
+            <br>printf("Line 1 - a is not equal to b\n" );
+            <br>}
+
+            <br>if ( a
+            < b )<br> {<br>
+                <br>printf("Line 2 - a is less than b\n" ); } <br>else<br> {<br>
+                <br>printf("Line 2 - a is not less than b\n" ); }
+                <br>
+
+                <br>if ( a > b )<br> {
+                <br>
+                <br>printf("Line 3 - a is greater than b\n" ); } <br>else { printf("Line 3 - a is not greater than b\n" ); }
+                <br> /* Lets change value of a and b */
+                <br>a = 5; b = 20;
+                <br> if ( a
+                <=b )<br> {
+                    <br>printf("Line 4 - a is either less than or equal to b\n" ); }
+                    <br>
+
+                    <br>if ( b >= a )<br> {
+                    <br> printf("Line 5 - b is either greater than or equal to b\n" );
+                    <br> } }
+    </div>
+    <hr>
+
+    <h2 style="text-align: center;"> ****************************************Bit wise Operator ***************************************************</h2>
+    <h3>Bitwise Operators Bitwise operator works on bits and perform bit-by-bit operation. </h3>
+    <table>
+        <tr>
+            <th>p</th>
+            <th>q</th>
+            <th>p & q</th>
+            <th>p | q </th>
+            <th>p ^ q</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+
+
+            <td>0</td>
+        </tr>
+    </table>
+</body>
+
+</html>

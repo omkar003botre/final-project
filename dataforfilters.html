@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        h1,
+        h2,
+        h3 {
+            color: indigo;
+        }
+        
+        input {
+            background-color: lawngreen;
+        }
+        
+        button {
+            background-color: cyan;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body ng-app="" background="backforfilterdata.jpg" style="background-repeat: no-repeat;">
+    <h1 style="text-align: center;">Angularjs Filter.</h1>
+    <h2>AngularJS provides filters to <br>transform data:</h2>
+    <ul>
+        <li>Currency: Format a number to a currency <br>format.</li>
+        <li>Date: Format a date to a specified format.</li>
+        <li>
+            Filter: Select a subset of items from an array.
+        </li>
+        <li>
+            JSON: Format an object to a JSON string.
+        </li>
+        <li>limitTo Limits an array/string, into a <br>specified number of elements/characters.</li>
+        <li>lowercase: Format a string to lower case.</li>
+        <li>Number: Format a number to a string.</li>
+        <li>orderBy: Orders an array by an expression.</li>
+        <li>uppercase: Format a string to upper case.
+        </li>
+    </ul>
+    <h2> use of filters filter</h2>
+    <h3>Lower case filter</h3>
+    Enter your Name in uppercase<input type="text" ng-model="ss"> Your name in lower case is<br>
+    <h2> {{ss|lowercase}}</h2>
+    <h3>Upper Case</h3>
+    Enter your Name in lowercase<input type="text" ng-model="ll"> Your name in lower case is <br>
+    <h2>{{ll|uppercase}}</h2>
+    <h3>Currency Filter</h3>
+    Enter the Price <input type="number" ng-model="cu"> The price is converted into Currency <br>
+    <h2>{{cu|currency}}</h2>
+    <h3>The filter Filter: Filters in filter is usded to select<br> the subset of an array. It is applicabel only on array and it <br>returns the array which contains the element<br>which satisfies the specific condition<br>Now see the practicle of more filters
+        by clicking the button</h3>
+    <a href="codeforfilters.html"><button>More filters. </button></a>
+
+    <a href="codefotoforfilterdata.png" target="blankpage"><button>Script for filters</button></a>
+</body>
+
+</html>

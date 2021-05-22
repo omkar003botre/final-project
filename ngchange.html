@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="App">
+    <div ng-controller="Ctrl">
+        <p>Write something in the input field:</p>
+        <input type="text" ng-change="myFunc()" ng-model="myValue" />
+        <h2>{{msg}} And</h2>
+        <p>The input field has changed {{count}} times.</p>
+        <a href="codefotoofngchange.png"><button>SEE SCRIPT</button></a><br><br><br>
+        <a href="dataofangularjsdvents.html"><button>BACK</button></a>
+
+    </div>
+
+
+    <script>
+        angular.module('App', [])
+            .controller('Ctrl', ['$scope', function($scope) {
+                $scope.count = 0;
+                $scope.myFunc = function() {
+                    $scope.count++;
+                    return $scope.msg = "You are trying to type!!!"
+                };
+            }]);
+    </script>
+</body>
+
+</html>

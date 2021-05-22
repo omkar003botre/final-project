@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <h1 style="color: deeppink; text-align: center;">filter Filter.</h1>
+    <div ng-app="myApp" ng-controller="namesCtrl">
+
+        <ul>
+            <li ng-repeat="game in arr | filter : 'i'">
+                <h1 style="color: purple;">{{ game }}</h1>
+            </li>
+        </ul>
+
+    </div>
+    <a href="dataforfilters.html"><button>BACK</button></a>
+    <a href="orderbyfilter.html"> <button>Click here to see the Orederby filter. </button></a>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('namesCtrl', function($scope) {
+            $scope.arr = [
+                'cricket',
+                'Car racing',
+                'Football',
+                'chess',
+                'kabaddi',
+                'base ball',
+                'Batmintan',
+                'Koh kho',
+                'Running'
+            ];
+        });
+    </script>
+
+    <p style="color: orangered;">This example displays only the gammes name containing the letter "i".</p>
+    <hr>
+    <h1 style="color:deeppink;text-align: center;">Script</h1>
+    <img src="codefotooffiltercode.png">
+</body>
+
+</html>

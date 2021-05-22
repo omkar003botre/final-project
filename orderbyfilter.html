@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <h1 style="color: blue; text-align: center;">OrederBy Filter</h1>
+    <div ng-app="kk" ng-controller="rc">
+        <h1 style="color: orangered;">This is oreder by Captain name</h1>
+        <ol>
+            <li ng-repeat="G in ipl | orderBy:'Captain'">{{G.Team + ',' + G.Captain}}
+
+            </li>
+        </ol>
+        <hr>
+        <h1 style="color: lime;"> This is oreder by team name</h1>
+        <ul>
+            <li ng-repeat="G in ipl | orderBy:'Team'">{{G.Team + ',' + G.Captain}}
+
+            </li>
+        </ul>
+        <hr>
+        <h1 style="color: royalblue;">Filter based on users input</h1>
+        <h2 style="color:purple;">Enter your city name</h2><input type="text" ng-model="city">
+        <ul>
+            <li ng-repeat="C in Rular | filter:city">{{C}}</li>
+        </ul>
+        <hr>
+        <h1>Sort an Array Based on User Input</h1>
+        <table>
+            <tr>
+                <th ng-click="order('Team')">Team Name</th>
+                <th ng-click="order('Captain')">Captain Nmae</th>
+            </tr>
+            <tr>
+                <td ng-repeat="t in ipl orderBy|myorder">{{t.Team}}</td>
+                <td>{{t.Captain}}</td>
+            </tr>
+        </table>
+
+        <a href="codeforfilters.html"><button>Back</button></a>
+    </div>
+
+    <script>
+        angular.module('kk', []).controller('rc', function($scope) {
+            $scope.ipl = [
+
+                {
+                    Team: 'KKR',
+                    Captain: 'Dinesh Kartik'
+                }, {
+                    Team: 'RCB',
+                    Captain: 'Virat Kohali'
+                }, {
+                    Team: 'CSK',
+                    Captain: 'MS Dhoini'
+                }, {
+                    Team: 'MI',
+                    Captain: 'Rohit Sharma'
+                }, {
+                    Team: 'KXIP',
+                    Captain: 'KL Rahul'
+                }, {
+                    Team: 'RR',
+                    Captain: 'Steav smith'
+                }, {
+                    Team: 'SRH',
+                    Captain: 'David Warner'
+                }, {
+                    Team: 'DC',
+                    Captain: 'shryes iyer'
+                }
+            ];
+            $scope.Rular = ['SASWAD', 'pune', 'mumbai', 'kolhapur', 'satara'];
+            $scope.order = function(t) {
+                $scope.myorder = t;
+            }
+        });
+    </script>
+</body>
+
+</html>

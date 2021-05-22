@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body background="backfortimeout.jpg" style="background-repeat: no-repeat; background-position: right;">
+    <h1 style="text-align: center; color: red;">The $timeout Service</h1>
+    <h2 style="color:darkblue; font-family: fantasy; background-color: darkgray;">The $timeout service is AngularJS' version of the window.setTimeout function.</h2>
+    <h2 style="color:darkblue; font-family: fantasy; background-color: darkgray;">The text or some messege will change after few second ,which set by you.<br>For this you have to pass the $timeout as a parameter to a function.</h2>
+    <div ng-app="qq" ng-controller="ww">
+
+        <h2 style="color:darkblue; font-family: fantasy ">TO bacame a king<br> {{timemsg}}</h2>
+    </div>
+    <a href="dataofservices.html"><button>Back</button></a><br><br>
+    <a href="codefotofottimeoutservices.png"><button> Script.</button></a>
+    <script>
+        var app = angular.module("qq", []);
+        app.controller("ww", function($scope, $timeout) {
+            $scope.timemsg = "The king required a kingdom ";
+
+            $timeout(function() {
+                $scope.timemsg = "NOt a Queen !!!";
+            }, 3000);
+        });
+    </script>
+</body>
+
+
+</html>

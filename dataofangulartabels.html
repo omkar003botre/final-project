@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Angularjs Table</h1>
+    <h1>Displaying with CSS Style To make it nice, add some CSS to the page:</h1>
+    <div ng-app="application" ng-controller="ctrl1">
+        <table style="align-self: center;
+        " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+            </tr>
+            <tr ng-repeat="C in detail">
+                <td>{{C.name}} </td>
+                <td>{{C.player}}</td>
+                <td>{{C.age }}</td>
+            </tr>
+        </table><br><br>
+        <a href="codefotofortable.png"><button>See the Script</button></a>
+        <h1 style="text-align: center;">OrederBy filter in table</h1>
+        <h2>Order by name</h2>
+        <table style="align-self: center;
+        " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+            </tr>
+            <tr ng-repeat="C in detail | orderBy:'name'">
+                <td>{{C.name}} </td>
+                <td>{{C.player}}</td>
+                <td>{{C.age }}</td>
+            </tr>
+        </table>
+        <h2>Order by ages</h2>
+        <table style="align-self: center;
+        " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+            </tr>
+            <tr ng-repeat="C in detail | orderBy:'age'">
+                <td>{{C.name}} </td>
+                <td>{{C.player}}</td>
+                <td>{{C.age }}</td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">Display with uppercase Filter To display uppercase, add an uppercase filter: </h1>
+        <table style="align-self: center;
+        " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+            </tr>
+            <tr ng-repeat="C in detail | orderBy:'age'">
+                <td>{{C.name | uppercase}} </td>
+                <td>{{C.player}}</td>
+                <td>{{C.age }}</td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">Display the Table Index ($index) To display the table index, add a
+            <td> with $index: </h1>
+        <table style="align-self: center;
+        " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+                <th>No</th>
+            </tr>
+            <tr ng-repeat="C in detail ">
+                <td>{{$index+1}}</td>
+                <td>{{C.name | uppercase}} </td>
+                <td>{{C.player}}</td>
+                <td>{{C.age }}</td>
+            </tr>
+        </table>
+        <h1 style="text-align: center;">Using $even and $odd</h1>
+        <table style="align-self: center;
+       " border="yes" ;>
+            <tr>
+                <th>player Name</th>
+                <th>Player type</th>
+                <th>Players ages</th>
+
+            </tr>
+            <tr ng-repeat="C in detail ">
+
+                <td ng-if="$odd" style="background-color: purple;">{{C.name | uppercase}} </td>
+                <td ng-if="$even" style="background-color:orangered;">{{C.name | uppercase}} </td>
+                <td ng-if="$odd" style="background-color: purple;">{{C.player}}</td>
+                <td ng-if=" $even " style="background-color:orangered;">{{C.player}}</td>
+                <td ng-if=" $odd " style="background-color:purple;">{{C.age }}</td>
+                <td ng-if=" $even " style="background-color:orangered;">{{C.age }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var app = angular.module("application", []);
+        app.controller("ctrl1", function($scope) {
+            $scope.detail = [{
+                    'name': 'Rohan Kamble',
+                    'player': 'fielder',
+                    'age': '19'
+                }, {
+                    'name': 'om Kamble',
+                    'player': 'Bolwer',
+                    'age': '15'
+                }, {
+                    'name': 'Atharav Nirgude',
+                    'player': 'bolwer',
+                    'age': '21'
+                }, {
+                    'name': 'Pratham Nirgude',
+                    'player': 'All rounder',
+                    'age': '19'
+                }, {
+                    'name': 'pratik Nigude',
+                    'player': 'spiner',
+                    'age': '18'
+                }, {
+                    'name': 'om botre',
+                    'player': 'Bolwer',
+                    'age': '18'
+                }, {
+                    'name': 'omkar Botre',
+                    'player': 'All rounder',
+                    'age': '19'
+                }, {
+                    'name': 'Tejas borawake',
+                    'player': 'All rounder',
+                    'age': '19'
+                },
+
+            ];
+        });
+    </script>
+</body>
+
+</html>

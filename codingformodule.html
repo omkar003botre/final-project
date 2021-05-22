@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="D:\script\angularjsprogramm\angularjslibery.js"></script>
+    <style>
+        h2 {
+            color: purple;
+            text-align: center;
+            background-color: sandybrown;
+        }
+        
+        h3 {
+            color: white;
+            font-size: x-large;
+        }
+        
+        h1 {
+            color: darkorange;
+        }
+        
+        button {
+            color: palegreen;
+            font-size: x-large;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body background="backforcodeofmodule.jpg">
+    <h2>How to create Angularjs module ?</h2>
+    <h3>Yes, It is a very simple you have to use only single line as below:<br> It is created by using an Angularjs function angular.module You have to have to pass the app name and square bracet in module function.<br>Once you define the module then you
+        are able to add controlllers,directives,filters and more.
+        <h2>How to create Angularjs controlllers ?</h2>
+        <h3>Angularjs controlllers are created by using anguar.controller function.</h3>
+
+    </h3>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        {{ firstName + " " + lastName }}
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.firstName = "Omkar";
+            $scope.lastName = "BOtre";
+        });
+    </script>
+
+    <a href="D:\script\angularjsprogramm\mywebsiteforwebstudy\angularjsmodel.html"><button>Back</button></a>
+
+    <h1>Script</h1>
+    <img src="codefotoforcontroller.png">
+</body>
+
+
+
+</html>

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</head>
+
+<body background="backforscopedata.jpg" style="background-repeat: no-repeat;" ng-app="application">
+
+    <h1 style="color: blue; text-align: center;">Angularjs Scope</h1>
+    <h2 style="color:black;background-color:chartreuse;">The scope is the binding part between the HTML (view) and the JavaScript (controller).<br> The scope is an object with the available properties and methods. <br>The scope is available for both the view and the controller.</h2>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <h2 style="color: blue;"> There are two types of scope as follow</h2>
+    <ul>
+        <li style="color: blue;">$scope.</li>
+        <li style="color: blue;">$rootscope.</li>
+    </ul>
+    <br><br><br>
+    <br><br><br>
+    <br><br>
+    <hr>
+    <h2 style="color: blue;">$scope</h2>
+    <h3 style="color: blue;">How can we impliment a scope?</h3>
+    <h3 style="color: blue;">
+        when we write a code for controller,then you have to pass the
+        <b><i>$scope</i></b> object as a parameter. </h3>
+    <hr>
+
+    <h2 style="color:chocolate;">$rootscope</h2>
+    <h3 style="color:chocolate;"> All applications have a $rootScope which is the scope created on the HTML element that contains the ng-app directive.<br> The rootScope is available in the entire application.<br> If a variable has the same name in both the current scope and in the
+        rootScope,
+        <br style="color:chocolate;"> the application uses the one in the current scope.</h3>
+    <hr>
+
+    <h2 style="color:crimson"> Practical of $scope and $rootscope </h2>
+    Enter the name<input type="text" ng-model="name">
+    <div></div>
+    <div ng-controller="ctrl1"></div>
+    <h2 style="color:crimson">Your name is {{name}}</h2>
+    <script>
+        var app = angular.module("application", []);
+        app.controller("ctrl1", function($scope) {
+            $scope.name = "The Rock";
+        });
+    </script>
+    <a href="thiredpage.html"><button>Back</a></button>
+    <h2>Click here to see the script</h2>
+    <a href="codefotoforscope.png" target="blankpage"><button>  Script</button></a>
+
+</body>
+
+
+</html>
